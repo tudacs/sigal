@@ -360,7 +360,8 @@ class Album:
                 if albums_sort_attr.startswith("meta."):
                     meta_key = albums_sort_attr.split(".", 1)[1]
                     key = lambda s: locale.strxfrm(
-                        self.gallery.albums[join(root_path, s)].meta.get(meta_key, [''])[0])
+                        self.gallery.albums[join(root_path, s)].meta.get(meta_key,
+                        [getattr(self.gallery.albums[join(root_path, s)], 'name')])[0])
                 else:
                     key = lambda s: locale.strxfrm(
                         getattr(self.gallery.albums[join(root_path, s)],

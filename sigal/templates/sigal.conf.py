@@ -116,7 +116,8 @@ thumb_size = (280, 210)
 # orig_link = False
 
 # Attribute of Album objects which is used to sort medias (eg 'title'). To sort
-# on a metadata key, use 'meta.key'.
+# on a metadata key, use 'meta.key' (lowercase!). If metadata is not available
+# fall back to name.
 # albums_sort_attr = 'name'
 
 # Reverse sort for albums
